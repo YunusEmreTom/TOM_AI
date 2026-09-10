@@ -1,9 +1,10 @@
+import os
 import requests  # HTTP istekleri için requests kütüphanesini içe aktar
 
 from translate import Translator  # Çeviri için Translator sınıfını içe aktar
 
 
-api_key = '395ccd54e9148627148b12a98ba10133'  # OpenWeatherMap API anahtarı
+api_key = os.environ["OPENWEATHER_API_KEY"]  # OpenWeatherMap API anahtari
 base_url ="https://api.openweathermap.org/data/2.5/weather?"  # OpenWeatherMap API temel URL'si
 
 city ="Malatya"  # Hava durumu sorgulanacak şehir
